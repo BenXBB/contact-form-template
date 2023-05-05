@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="styles.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Template Tester</title>
+</head>
+
+<body>
+
+    <!-- ========================================================== Nav Section ========================================================== -->
+    <nav class="navbar navbar-expand-lg bg-dark bg-body-tertiary" data-bs-theme="dark">
+        <div id="navContainer" class="container-fluid">
+            <span id="loginName">You are not logged in</span>
+            <button class="btn btn-outline-success" type="button" data-bs-toggle="modal"
+                data-bs-target="#loginModal">Login</button>
+        </div>
+        </div>
+    </nav>
+
+    <!-- ========================================================== Contact Section ========================================================== -->
+    <section id="contact" class="contact">
+        <div class="container">
+
+            <div class="col-lg-12 mt-5 mt-lg-0 d-flex align-items-stretch">
+
+                <form role="form" id="contactForm">
+                    <h1>Contact form</h1>
+                    <div class="row g-2">
+
+                        <div class="form-floating mb-3 col-md-6">
+                            <input type="text" name="fname" class="form-control" id="fname" placeholder="First Name"
+                                required>
+                            <label for="fname">First Name</label>
+                        </div>
+
+                        <div class="form-floating mb-3 col-md-6">
+                            <input type="text" name="lname" class="form-control" id="lname" placeholder="Last Name"
+                                required>
+                            <label for="lname">Last Name</label>
+                        </div>
+
+                        <div class="form-floating mb-3 col-md-6">
+                            <input type="email" class="form-control" name="email" id="email" placeholder="Email"
+                                required>
+                            <label for="email">Email</label>
+                        </div>
+
+                        <div class="form-floating mb-3 col-md-6">
+                            <input type="text" class="form-control" name="phone" id="phone" placeholder="Phone"
+                                required>
+                            <label for="phone">Phone</label>
+                        </div>
+
+                    </div>
+
+                    <div class="form-floating mb-3 col-md-12">
+                        <textarea id="message" class="form-control" name="message" cols="10" placeholder="Message"
+                            required></textarea>
+                        <label for="message">Message</label>
+                    </div>
+                    <div id="emailConfirmation"></div>
+                    <div class="my-3">
+                    </div>
+                    <div class="text-center"><button id="submitContact" class="btn btn-primary"
+                            type="submit">Submit</button></div>
+                    <div class="alert alert-success status" role="alert"></div>
+                </form>
+            </div>
+
+        </div>
+
+        </div>
+    </section>
+    <!-- ========================================================== End Contact Section ========================================================== -->
+    <br /> <br />
+    <!-- ========================================================== Get table Section ========================================================== -->
+    <section id="contactTable" class="contactTable">
+        <div class="text-center"><button id="showContacts" class="btn btn-secondary" type="button">Show contact
+                table</button></div>
+        <div id="contactTable">
+
+        </div>
+    </section>
+    <!-- ========================================================== End get table Section ========================================================== -->
+
+    <!-- ========================================================== Login modal ========================================================== -->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Login</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+
+                    <form id="loginForm">
+                        <div class="form-floating mb-3">
+                            <input type="email" class="form-control" id="loginEmail" aria-describedby="emailHelp">
+                            <label for="loginEmail" class="form-label">Email address</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input type="password" class="form-control" id="loginPassword">
+                            <label for="loginPassword" class="form-label">Password</label>
+                        </div>
+                        <div class="text-center"><button type="submit" class="btn btn-primary">Login</button></div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!------------------------PRELOADER------------------------>
+    <div id="preloader"></div>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+    </script>
+    <script src="./script.js"></script>
+</body>
+
+</html>
