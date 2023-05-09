@@ -141,3 +141,34 @@ $("#showContacts").click(function() {
 
     }); // End of submitForm btn
 }); // End of .submit function
+
+
+// Sending an AJAX request to curl php when the coutnry select dropdown changes
+$("#countrySelect").on("change", function() {
+
+    $.ajax({
+        type: 'GET',
+        url: 'getCountryInfo.php',
+        dataType: 'json',
+        data: {
+            country: $("#countrySelect option:selected").val()
+        },
+
+        success: function(result) {
+            let countryData = result["data"]["geonames"];
+
+            $("#countryTableContents").append(
+                '<tr>' +
+                    '<td>' + $("#countrySelect option:selected").text() + '</td>' +
+                    '<td>' + countryData[0]["capital"] + '</td>' +
+                    '<td>' + countryData[0]["continentName"] + '</td>' +
+                    '<td>' + countryData[0]["currencyCode"] + '</td>' +
+                    '<td>' + countryData[0]["areaInSqKm"] + '</td>'
+            );
+        },
+        error: function(jqXHR, textStatus, errorThrown) {
+            console.log(jqXHR, textStatus, errorThrown);
+        }
+
+    }); // End of AJAX
+}); // End of .onChange function

@@ -98,3 +98,19 @@ input#contactName {
     color: white;
     margin-right: 12px;
 }
+
+/* GET COUNTRY INFO CONTAINER */
+.getCountrycontainer {
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+#getCountryInfo {
+    margin-left: 24px;
+    margin-right: 24px;
+}
+
+#countrySelect {
+    width: 500px;
+    margin: auto;
+}
